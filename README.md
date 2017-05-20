@@ -18,7 +18,7 @@ password: hypriot
 ````
 3- clone current project
 ````
-git clone https://github.com/estebanrfp/rspi-kiosk.git
+git clone https://github.com/estebanrfp/iot-kiosk.git
 ````
 4- launch docker-compose
 ````
