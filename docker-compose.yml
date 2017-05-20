@@ -1,7 +1,7 @@
 version: '2'
 services:
   project:
-    # build: ./display
+    build: ./display
     # command: npm run start-prod
     # restart: always
     # ports:

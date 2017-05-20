@@ -4,4 +4,5 @@ RUN apt-get update && apt-get dist-upgrade && apt-get install -y \
     wget \
     curl \
     chromium-browser 
+
 USER chromium
