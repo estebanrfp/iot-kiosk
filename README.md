@@ -66,5 +66,4 @@ The root directory generated for the app :
 ├──  wifi-ap
 ├──  docker-compose.yml
 ├──  README.md
-
 </pre>
