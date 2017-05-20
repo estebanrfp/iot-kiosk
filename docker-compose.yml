@@ -2,13 +2,13 @@ version: '2'
 services:
   project:
     build: ./display
-    # command: npm run start-prod
-    # restart: always
-    # ports:
-    #   - "3000:3000"
-    # expose:
-    #   - 3000
-    # tty: true
+    command: npm run start-prod
+    restart: always
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    tty: true
 
   x11:
     build: ./tools/docker/dockerfiles/x11/
@@ -26,9 +26,8 @@ services:
 
   chrome:
     build: ./tools/docker/dockerfiles/chrome/
-    # https://tessel-climate-7f227.firebaseapp.com/
-    # command: chromium-browser --kiosk http://project:3000 --no-first-run --touch-events=enabled --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
-    command: chromium-browser --kiosk https://tessel-climate-7f227.firebaseapp.com/ --no-first-run --touch-events=enabled --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
+    command: chromium-browser --kiosk http://project:3000 --no-first-run --touch-events=enabled --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
+    # command: chromium-browser --kiosk https://tessel-climate-7f227.firebaseapp.com/ --no-first-run --touch-events=enabled --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
     restart: always
     environment:
       - DISPLAY=:0
