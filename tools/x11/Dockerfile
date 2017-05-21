@@ -1,4 +1,5 @@
-FROM resin/rpi-raspbian:wheezy
+#FROM resin/rpi-raspbian:wheezy
+FROM armhf/alpine
 
 RUN sudo apt-get update && sudo apt-get install --no-install-recommends -y \
 	openbox \
