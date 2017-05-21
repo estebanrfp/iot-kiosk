@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:jessie
+FROM resin/rpi-raspbian:wheezy
 RUN useradd -ms /bin/bash chromium
 RUN apt-get update && apt-get dist-upgrade && apt-get install -y \
     rpi-update \
@@ -17,7 +17,7 @@ RUN sudo apt-get update && apt-get install -y \
     ttf-mscorefonts-installer \
     chromium-browser \
     lsb-release
-    
+
 RUN rpi-update
 
 USER chromium
