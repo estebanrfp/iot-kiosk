@@ -5,6 +5,7 @@
   "description": "Home interface for Internet Of Things",
   "author": "estebanrfp",
   "dependencies": {
+    "express": "3.2.4",
     "child_process": "^1.0.2",
     "firebase": "^3.7.0",
     "simple-git": "^1.70.0"
