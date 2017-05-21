@@ -11,7 +11,7 @@ services:
     tty: true
 
   x11:
-    build: ./tools/docker/dockerfiles/x11/
+    build: ./tools/x11/
     environment:
       - DISPLAY=:0
       - QT_X11_NO_MITSHM=1
@@ -25,7 +25,7 @@ services:
     privileged: true
 
   chrome:
-    build: ./tools/docker/dockerfiles/chrome/
+    build: ./tools/chrome/
     command: chromium-browser --kiosk http://project:3000 --no-first-run --touch-events=enabled --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
     # command: chromium-browser --kiosk https://tessel-climate-7f227.firebaseapp.com/ --no-first-run --touch-events=enabled --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
     restart: always
