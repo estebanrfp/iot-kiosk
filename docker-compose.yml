@@ -1,14 +1,14 @@
 version: '2'
 services:
-  project:
-    build: ./display
-    command: npm run start-prod
-    restart: always
-    ports:
-      - "3000:3000"
-    expose:
-      - 3000
-    tty: true
+  # project:
+  #   build: ./display
+  #   command: npm run start-prod
+  #   restart: always
+  #   ports:
+  #     - "3000:3000"
+  #   expose:
+  #     - 3000
+  #   tty: true
 
   x11:
     build: ./tools/x11/
@@ -19,7 +19,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     links:
-      - project
+      # - project
     stdin_open: true
     tty: true
     privileged: true
@@ -35,7 +35,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     links:
-      - project
+      # - project
       - x11
     stdin_open: true
     tty: true
