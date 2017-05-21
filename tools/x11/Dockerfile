@@ -1,8 +1,6 @@
 FROM resin/rpi-raspbian:wheezy
 
-RUN sudo apt-get update
-
-RUN sudo apt-get install --no-install-recommends -y \
+RUN sudo apt-get update && sudo apt-get install --no-install-recommends -y \
 	openbox \
     xserver-xorg \
     xinit \
